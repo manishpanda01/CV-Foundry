@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Foundry — On‑device AI CV Builder</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%2372e2a3'/></svg>">
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>CV Foundry</h1>
+      <p class="tagline">ATS‑safe, country‑aware CVs with Chrome’s built‑in AI (Gemini Nano).</p>
+      <div id="ai-status" class="status">Checking built‑in AI availability…</div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>1) Profile</h2>
+        <div class="grid">
+          <label>Full name<input id="name" type="text" placeholder="Jane Doe" /></label>
+          <label>Professional title<input id="title" type="text" placeholder="Software Engineer" /></label>
+          <label>Location<input id="location" type="text" placeholder="London, UK" /></label>
+        </div>
+        <div class="grid">
+          <label>Email<input id="email" type="email" placeholder="jane@example.com" /></label>
+          <label>Phone<input id="phone" type="text" placeholder="+44 20 1234 5678" /></label>
+          <label>Website<input id="website" type="url" placeholder="https://example.com" /></label>
+        </div>
+        <div class="grid">
+          <label>LinkedIn<input id="linkedin" type="url" placeholder="https://linkedin.com/in/jane" /></label>
+          <label>GitHub<input id="github" type="url" placeholder="https://github.com/jane" /></label>
+        </div>
+        <label>Summary<textarea id="summary" rows="3" placeholder="1–3 lines about your strengths and role."></textarea></label>
+      </section>
+
+      <section class="card">
+        <h2>2) Country & ATS</h2>
+        <div class="grid">
+          <label>Country pack
+            <select id="countryPack"></select>
+          </label>
+          <label><input type="checkbox" id="atsStrict" checked/> ATS strict mode (no tables, single column)</label>
+          <label>Spelling locale
+            <select id="locale">
+              <option value="auto">Auto (via Language Detector)</option>
+              <option value="en-GB">English (UK)</option>
+              <option value="en-US">English (US)</option>
+              <option value="de-DE">Deutsch</option>
+              <option value="fr-FR">Français</option>
+              <option value="en-IN">English (India)</option>
+            </select>
+          </label>
+        </div>
+        <div id="countryNotes" class="notes"></div>
+      </section>
+
+      <section class="card">
+        <h2>3) Experience</h2>
+        <div id="experienceList"></div>
+        <button id="addExperience" class="btn">+ Add Experience</button>
+      </section>
+
+      <section class="card">
+        <h2>4) Education</h2>
+        <div id="educationList"></div>
+        <button id="addEducation" class="btn">+ Add Education</button>
+      </section>
+
+      <section class="card">
+        <h2>5) Skills</h2>
+        <input id="skills" type="text" placeholder="Comma‑separated (e.g., React, TypeScript, AWS)"/>
+      </section>
+
+      <section class="card">
+        <h2>6) Job Snap (paste URL or text)</h2>
+        <textarea id="jobText" rows="6" placeholder="Paste the job description text or copy from current tab with the extension."></textarea>
+        <div class="row">
+          <button id="analyzeJD" class="btn">Analyze Job (Summarizer)</button>
+          <button id="genBullets" class="btn">Generate STAR bullets (Prompt JSON)</button>
+          <button id="rewriteTone" class="btn">Tighten & adjust tone (Rewriter)</button>
+          <button id="proofread" class="btn">Proofread</button>
+          <button id="translate" class="btn">Translate to country locale</button>
+        </div>
+        <pre id="jdOut" class="pre"></pre>
+      </section>
+
+      <section class="card">
+        <h2>7) Preview & Export</h2>
+        <div id="atsWarnings" class="warnings"></div>
+        <div id="preview" class="preview"></div>
+        <div class="row">
+          <button id="exportHTML" class="btn">Export HTML</button>
+          <button id="exportPDF" class="btn">Export PDF (print)</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Built for the Google Chrome Built‑in AI Challenge 2025 — All AI runs on‑device when supported.</small>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

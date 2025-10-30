@@ -1,0 +1,89 @@
+{
+  "UK": {
+    "page_limit": 2,
+    "photo_allowed": false,
+    "date_format": "MMM YYYY\u2013MMM YYYY",
+    "spelling": "en-GB",
+    "sections": [
+      "Summary",
+      "Experience",
+      "Education",
+      "Skills",
+      "Certifications"
+    ],
+    "notes": [
+      "Avoid photos to reduce bias risk.",
+      "Single column layout. No tables.",
+      "Reverse chronological experience."
+    ]
+  },
+  "US": {
+    "page_limit": 1,
+    "photo_allowed": false,
+    "date_format": "MMM YYYY\u2013MMM YYYY",
+    "spelling": "en-US",
+    "sections": [
+      "Summary",
+      "Experience",
+      "Education",
+      "Skills",
+      "Projects"
+    ],
+    "notes": [
+      "Early-career resumes typically 1 page.",
+      "Avoid headers/footers for key info.",
+      "Single column. No graphics."
+    ]
+  },
+  "DE": {
+    "page_limit": 2,
+    "photo_allowed": false,
+    "date_format": "MM/YYYY\u2013MM/YYYY",
+    "spelling": "de-DE",
+    "sections": [
+      "Profil",
+      "Berufserfahrung",
+      "Ausbildung",
+      "F\u00e4higkeiten",
+      "Zertifikate"
+    ],
+    "notes": [
+      "Photo is culturally common but optional. Keep off for ATS fairness.",
+      "List languages with CEFR levels (e.g., B2)."
+    ]
+  },
+  "FR": {
+    "page_limit": 2,
+    "photo_allowed": false,
+    "date_format": "MM/YYYY\u2013MM/YYYY",
+    "spelling": "fr-FR",
+    "sections": [
+      "Profil",
+      "Exp\u00e9rience",
+      "\u00c9ducation",
+      "Comp\u00e9tences",
+      "Certifications"
+    ],
+    "notes": [
+      "Photo sometimes used; for ATS mode, keep off.",
+      "Use accents correctly (\u00e9, \u00e7)."
+    ]
+  },
+  "IN": {
+    "page_limit": 2,
+    "photo_allowed": false,
+    "date_format": "MMM YYYY\u2013MMM YYYY",
+    "spelling": "en-IN",
+    "sections": [
+      "Summary",
+      "Experience",
+      "Education",
+      "Skills",
+      "Achievements"
+    ],
+    "notes": [
+      "Keep format ATS-simple; avoid images and tables.",
+      "Quantify impact (%, \u20b9, time saved)."
+    ]
+  }
+}
